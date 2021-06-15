@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head><script type="text/javascript" charset="UTF-8">
+(function (global) {
+    global.outsystems = global.outsystems || {};
+    global.outsystems.internal = global.outsystems.internal || {};
+})(this);
+outsystems.internal.timerspolyfillResponseStart = new Date().getTime();
+outsystems.internal.startInstant = new Date();
+outsystems.internal.requestEventName = 'WebScreenClientExecuted';
+outsystems.internal.beaconRESTURL = '/PerformanceProbe/rest/BeaconInternal/WebScreenClientExecutedEvent';
+</script><title>
+	Details
+</title><meta name="msapplication-tap-highlight" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="mobile-web-app-capable" content="yes" /><meta name="format-detection" content="telephone=no" /><meta name="msapplication-tap-highlight" content="no" /><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="mobile-web-app-capable" content="yes" /><meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" />
+<style>
+.OSFillParent { 
+ display: block;
+ width: 100%;
+}
+table.OSFillParent {
+ display: table;
+}
+input.OSFillParent,
+button.OSFillParent,
+select.OSFillParent,
+textarea.OSFillParent {
+ display: inline-block;
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+}
+.OSInline {
+ display: inline-block;
+ *zoom: 1;
+ *display: inline;
+ vertical-align: top;
+}
+table.OSInline {
+ display: inline-table;
+}
+.OSAutoMarginTop {
+ margin-top: 10px;
+}
+table[class*="ThemeGrid_Width"] {
+ display: inline-table;
+ vertical-align: top;
+}
+div[class*="ThemeGrid_Width"] {
+ vertical-align: top;
+}
+th[class*="ThemeGrid_Width"],
+td[class*="ThemeGrid_Width"] {
+ display: table-cell;
+}
+[class*="ThemeGrid_Width"] {
+ display: inline-block;
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ *zoom: 1;
+ *display: inline;
+}
+.ThemeGrid_Container {
+ box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+}
+
+</style>
+<link href="/RichWidgets/Blocks/RichWidgets/RichWidgets/Icon.css?6669" type="text/css" rel="stylesheet" />
+<link href="/WebPatterns/Blocks/WebPatterns/Private/Tooltipster_3_0_6.css?4374" type="text/css" rel="stylesheet" />
+<link href="/WebPatterns/Blocks/WebPatterns/Javascript/SilkUI.css?4374" type="text/css" rel="stylesheet" />
+<link href="/RichWidgets/Blocks/RichWidgets/jQueryUI/jQueryUIInternal.css?6669" type="text/css" rel="stylesheet" />
+<link href="/RichWidgets/Blocks/RichWidgets/RichWidgets/Feedback_Message.css?6669" type="text/css" rel="stylesheet" />
+<link href="/RiskAnalysisInterface/Widgets/Form/Form.css?11_9_2_29615" type="text/css" rel="stylesheet" />
+    <link href="Theme.RiskAnalysis.css?4802" type="text/css" rel="stylesheet" />
+    <link href="Details.css?4802" type="text/css" rel="stylesheet" />
+    <link href="/Paragon_Theme/Theme.Paragon_Theme.extra.css?4284" type="text/css" rel="stylesheet" />
+    <script id="_OSrequestInfoScript" type="text/javascript">(function(global) { global.outsystems = global.outsystems || {};global.outsystems.internal = global.outsystems.internal || {};global.outsystems.internal.requestInfo = {visitorKey:'525554c2-5bb0-41ea-8686-6293810ba618',visitKey:'9346f97e-7c25-4eb6-ba12-2bf58040e311',sessionKey:'fkBvhE2H1EGmfsidSOskYA==',userKey:'692c5cd7-6e52-d445-d7a5-f36a4bc48f97',requestKey:'f5803d2e-65c5-4bda-90a4-2d1803c226fb',webScreenKey:'ba7eeb35-065d-45a5-85f6-afd591d35678',webScreenName:'Details',espaceKey:'c2721ad6-c667-42c1-bf8f-a7a2d9936453',espaceName:'RiskAnalysisInterface',applicationKey:'86577701-9dd1-437b-9df7-3e380a56721d',applicationName:'Risk Analysis',tenantKey:'f8e4b940-103c-eec3-6e8a-286b1dad064b',tenantName:'Users',environmentKey:'03cf8e23-0506-41a5-bf99-c0f133da3877',environmentName:'Production',frontendKey:'$1$kX+vRd98pD4xboSZu9fhxw==+b84a2xAvqHgz+h8hsSxXt9ca3nssixzW7f4FFDKxdk='}})(this);</script>
+    <script src="_osjs.js?11_9_2_29615" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/WebPatterns/Javascript/ClientDeviceDetection.en.js?4374" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/WebPatterns/Javascript/SilkUICommon.en.js?4374" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/WebPatterns/Javascript/SilkUI.en.js?4374" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/WebPatterns/Utilities/Feedback_AjaxWait.en.js?4374" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/RichWidgets/RichWidgets/Feedback_Message.en.js?6669" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/RiskAnalysisInterface/Layouts2/Paragon_Risk_Analysis_Layout.js?4802" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/RichWidgets/jQueryUI/jQueryUIInternal.en.js?6669" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/RichWidgets/jQueryUI/jQueryComponents.en.js?6669" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Blocks/RichWidgets/RichWidgets/Popup_Editor.en.js?6669" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Widgets/Form/fastclick.js?11_9_2_29615" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Widgets/Form/Form.js?11_9_2_29615" type="text/javascript" charset="UTF-8"></script>
+    <script src="/RiskAnalysisInterface/Details.js?4802" type="text/javascript" charset="UTF-8"></script>
+
+</head>
+  <body data-os-cookie-policy="Secure">
+    <form method="post" action="Details.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="WebForm1" name="WebForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__OSVSTATE" id="__OSVSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['WebForm1'];
+if (!theForm) {
+    theForm = document.WebForm1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+OsPrepareCheckboxesForSubmit();
+OsFixUploadBeforeSubmit();
+if (!OsValidatorOnSubmit()) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AA6FEED5" />
+</div>
+<div  class="Page startHidden windows chrome en LisbonTheme"><header  class="Header"><div  class="Header_center ThemeGrid_Container"><div  class="ThemeGrid_Width2"><img alt="" src="/RiskAnalysisInterface/img/ParagonWhite.png?4802" style="width:150px;" /></div ><div  class="ThemeGrid_Width10 ThemeGrid_MarginGutter" align="right"></div ></div ><div  class="Header_background"></div ></header ><div  class="navigation OSAutoMarginTop"><div  class="ThemeGrid_Container"><div  class="ThemeGrid_Width12 pad-b-10 pad-t-10" align="right"><div  class="ThemeGrid_Width2 OSInline" style="width: 200px">Robert Minshull</div ><div  class="ThemeGrid_Width2 OSInline" style="width: 120px"><a id="LogoutButton" tabindex="1" href="javascript:__doPostBack(&#39;wt616$wt24&#39;,&#39;&#39;)"><i class='material-icons'>lock</i>Logout</a></div ></div ></div ></div ><div  class="Content "><div  align="center"><section  id="wt616_wtMainContent" class="MainContent MainContent--Grey ThemeGrid_Width11"><div ><span class="Bold">Viewing snapshot : Current Version last updated by SCLISA</span></div ><div  id="wt616_wtMainContent_wtTopButtons" style="margin-top: 20px;"><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt105&#39;,&#39;wt616$wtMainContent$wt105&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt105" value="Save" id="wt616_wtMainContent_wt105" tabindex="2" class="Button" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt343&#39;,&#39;wt616$wtMainContent$wt343&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt343" value="Exit" id="wt616_wtMainContent_wt343" tabindex="3" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtViewSnapshot2&#39;,&#39;wt616$wtMainContent$wtViewSnapshot2&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtViewSnapshot2" value="View" id="wt616_wtMainContent_wtViewSnapshot2" tabindex="4" class="Button ThemeGrid_MarginGutter" /><input onclick="var ret = confirm(&#39;This will be closed down and will no longer be editable - are you sure ?&#39;);if( ret != true ) {return false;}OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt521&#39;,&#39;wt616$wtMainContent$wt521&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt521" value="Lockdown" id="wt616_wtMainContent_wt521" tabindex="5" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtSnapshotButton2&#39;,&#39;wt616$wtMainContent$wtSnapshotButton2&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtSnapshotButton2" value="Snapshot" id="wt616_wtMainContent_wtSnapshotButton2" tabindex="6" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtCopyButton2&#39;,&#39;wt616$wtMainContent$wtCopyButton2&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtCopyButton2" value="Copy" id="wt616_wtMainContent_wtCopyButton2" tabindex="8" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt612&#39;,&#39;wt616$wtMainContent$wt612&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt612" value="Printable Version" id="wt616_wtMainContent_wt612" tabindex="12" class="Button ThemeGrid_MarginGutter" /></div ><div  id="wt616_wtMainContent_wtHiddenButtons"><input onclick="window.location.href=&#39;SelectSnapshot.aspx?Sequence=23330&#39;; return false;" type="submit" name="wt616$wtMainContent$wtViewButtonHidden" value="View" id="wt616_wtMainContent_wtViewButtonHidden" tabindex="14" class="Button" style="display: none" /><span id="wt616_wtMainContent_RichWidgets_wt579_block_wt2"><div  style="display:none"><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtGenerateUploadTokenButton&#39;,&#39;wt616$wtMainContent$RichWidgets_wt579$block$wt2$wtGenerateUploadTokenButton&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt579$block$wt2$wtGenerateUploadTokenButton" value="Generate Upload Token" id="wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtGenerateUploadTokenButton" tabindex="15" class="Button" /><input onclick="window.location.href=&#39;https://www.paragonbankinggroup.co.uk/RichWidgets/Popup_Upload.aspx&#39;; return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt579$block$wt2$wtPopupUploadLink" value="Open Popup Upload" id="wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtPopupUploadLink" tabindex="16" class="Button ThemeGrid_MarginGutter" /><span id="wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtTriggerUploadContainer"></span></div ><span class="Text_Note"><script type='text/javascript'>
+   outsystems.internal.$().ready(function () {
+        var elem = document.getElementById('wt616_wtMainContent_wtViewButtonHidden');
+        var isPopupUpload = false;
+        if (elem) {
+            if (elem.href) {
+                isPopupUpload = elem.href.toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            } else if (elem.onclick) {
+                isPopupUpload = elem.onclick.toString().toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            }
+        }
+
+        if (isPopupUpload && true) {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtPopupUploadLink',
+    'wt616_wtMainContent_RichWidgets_wt579_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false, 'wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtUploadTokenInput');
+            RichWidgets_Popup_Editor_Token_Generator_init(
+                'wt616_wtMainContent_wtViewButtonHidden',
+                'wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtGenerateUploadTokenButton');
+        } else {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_wtViewButtonHidden',
+    'wt616_wtMainContent_RichWidgets_wt579_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false);
+        }
+    });
+
+ </script></span></span><input onclick="window.location.href=&#39;SnapshotPurpose.aspx&#39;; return false;" type="submit" name="wt616$wtMainContent$wtSnapshotButtonHidden" value="Ok" id="wt616_wtMainContent_wtSnapshotButtonHidden" tabindex="18" class="Button ThemeGrid_MarginGutter" style="display: none" /><span id="wt616_wtMainContent_RichWidgets_wt568_block_wt2"><div  style="display:none"><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtGenerateUploadTokenButton&#39;,&#39;wt616$wtMainContent$RichWidgets_wt568$block$wt2$wtGenerateUploadTokenButton&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt568$block$wt2$wtGenerateUploadTokenButton" value="Generate Upload Token" id="wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtGenerateUploadTokenButton" tabindex="19" class="Button" /><input onclick="window.location.href=&#39;https://www.paragonbankinggroup.co.uk/RichWidgets/Popup_Upload.aspx&#39;; return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt568$block$wt2$wtPopupUploadLink" value="Open Popup Upload" id="wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtPopupUploadLink" tabindex="20" class="Button ThemeGrid_MarginGutter" /><span id="wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtTriggerUploadContainer"></span></div ><span class="Text_Note"><script type='text/javascript'>
+   outsystems.internal.$().ready(function () {
+        var elem = document.getElementById('wt616_wtMainContent_wtSnapshotButtonHidden');
+        var isPopupUpload = false;
+        if (elem) {
+            if (elem.href) {
+                isPopupUpload = elem.href.toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            } else if (elem.onclick) {
+                isPopupUpload = elem.onclick.toString().toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            }
+        }
+
+        if (isPopupUpload && true) {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtPopupUploadLink',
+    'wt616_wtMainContent_RichWidgets_wt568_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false, 'wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtUploadTokenInput');
+            RichWidgets_Popup_Editor_Token_Generator_init(
+                'wt616_wtMainContent_wtSnapshotButtonHidden',
+                'wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtGenerateUploadTokenButton');
+        } else {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_wtSnapshotButtonHidden',
+    'wt616_wtMainContent_RichWidgets_wt568_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false);
+        }
+    });
+
+ </script></span></span><input onclick="window.location.href=&#39;SelectAnalysis.aspx?SequenceNumber=23330&#39;; return false;" type="submit" name="wt616$wtMainContent$wtCopyButtonHidden" value="Copy" id="wt616_wtMainContent_wtCopyButtonHidden" tabindex="22" class="Button ThemeGrid_MarginGutter" style="display: none" /><span id="wt616_wtMainContent_RichWidgets_wt279_block_wt2"><div  style="display:none"><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtGenerateUploadTokenButton&#39;,&#39;wt616$wtMainContent$RichWidgets_wt279$block$wt2$wtGenerateUploadTokenButton&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt279$block$wt2$wtGenerateUploadTokenButton" value="Generate Upload Token" id="wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtGenerateUploadTokenButton" tabindex="23" class="Button" /><input onclick="window.location.href=&#39;https://www.paragonbankinggroup.co.uk/RichWidgets/Popup_Upload.aspx&#39;; return false;" type="submit" name="wt616$wtMainContent$RichWidgets_wt279$block$wt2$wtPopupUploadLink" value="Open Popup Upload" id="wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtPopupUploadLink" tabindex="24" class="Button ThemeGrid_MarginGutter" /><span id="wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtTriggerUploadContainer"></span></div ><span class="Text_Note"><script type='text/javascript'>
+   outsystems.internal.$().ready(function () {
+        var elem = document.getElementById('wt616_wtMainContent_wtCopyButtonHidden');
+        var isPopupUpload = false;
+        if (elem) {
+            if (elem.href) {
+                isPopupUpload = elem.href.toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            } else if (elem.onclick) {
+                isPopupUpload = elem.onclick.toString().toLowerCase().indexOf('/richwidgets.popup_upload.aspx') >= 0;
+            }
+        }
+
+        if (isPopupUpload && true) {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtPopupUploadLink',
+    'wt616_wtMainContent_RichWidgets_wt279_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false, 'wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtUploadTokenInput');
+            RichWidgets_Popup_Editor_Token_Generator_init(
+                'wt616_wtMainContent_wtCopyButtonHidden',
+                'wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtGenerateUploadTokenButton');
+        } else {
+            RichWidgets_Popup_Editor_WithToken_init('wt616_wtMainContent_wtCopyButtonHidden',
+    'wt616_wtMainContent_RichWidgets_wt279_block_wt2',' ',-1,-1,'https://www.paragonbankinggroup.co.uk/RiskAnalysisInterface/Details.aspx?SequenceNumber=23330\x26Snapshot=C\x26Exposure=Y', true, true, false, false);
+        }
+    });
+
+ </script></span></span><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt478&#39;,&#39;wt616$wtMainContent$wt478&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt478" value="Ok" id="wt616_wtMainContent_wt478" tabindex="26" class="KeepAlive ThemeGrid_MarginGutter" style="display:none" /></div ><div  align="left"><a id="wt616_wtMainContent_wt214" tabindex="27" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt214&#39;,&#39;wt616$wtMainContent$wt214&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Accounts</label></a></div ><span id="wt616_wtMainContent_wtAccounts"><div  align="left"><table class="TableRecords OSFillParent" cellspacing="0" id="wt616_wtMainContent_wtTableRecords1">
+	<tr>
+		<td class="TableRecords_OddLine" style="width:25%;">5217923</td><td class="TableRecords_OddLine" style="width:10%;">P1</td><td class="TableRecords_OddLine" style="width:65%;">258 Avenue Road Extension, LE2 3EL</td>
+	</tr>
+</table><input onclick="window.location.href=&#39;PickAccounts.aspx?Sequence=23330&#39;; return false;" type="submit" name="wt616$wtMainContent$wt354" value="Change" id="wt616_wtMainContent_wt354" tabindex="28" class="Button" /></div ></span><div  align="left"><a id="wt616_wtMainContent_wt411" tabindex="29" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt411&#39;,&#39;wt616$wtMainContent$wt411&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Details</label></a></div ><span id="wt616_wtMainContent_wtDetails"><div ><span id="wt616_wtMainContent_wtDetailList" class="ListRecords"><table class="TableRecords OSFillParent">
+	<tr>
+		<td style="width: 17%"><span class="Bold">Account </span></td>
+		<td style="width: 8%">5217923</td>
+		<td style="width: 17%"><span class="Bold">Property</span></td>
+		<td style="width: 50%" colspan="2">258 Avenue Road Extension, LE2 3EL</td>
+		<td style="width: 8%">Standard</td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><span class="Bold">Company Name</span></div ></td>
+		<td style="width: 42%" colspan="2"><div  align="center"><span class="Bold">Shareholders / Directors</span></div ></td>
+		<td style="width: 33%" colspan="2"><div  align="center"><span class="Bold">Ltd Company Score</span></div ></td>
+	</tr>
+	<tr>
+		<td style="width: 17%" colspan="2"><div  align="center">Strike Properties Ltd</div ></td>
+		<td style="width: 17%" colspan="2"><div  align="center"><span id="wt616_wtMainContent_wtDetailList_ctl00_wt152_wtListRecords1" class="ListRecords">Mr Nimesh Pau<br/>Mr Rupesh Morjaria<br/>Mr G Deo<br/>Mr J Morjaria<br/></span></div ></td>
+		<td style="width: 8%" colspan="2"><div  align="center">036</div ></td>
+	</tr>
+</table><table class="TableRecords OSFillParent" style="margin-top: 2px;">
+	<tr>
+		<td style="width: 17%"><span class="Bold">Purchase/Remortgage </span></td>
+		<td style="width: 8%"><div  align="center">Purchase</div ></td>
+		<td style="width: 17%"><span class="Bold">Loan Amount </span></td>
+		<td style="width: 8%"><div  align="right">&#163;137,625.00</div ></td>
+		<td style="width: 17%"><span class="Bold">Purchase Price/Valuation </span></td>
+		<td style="width: 8%"><div  align="right">&#163;183,500.00</div ></td>
+		<td style="width: 17%"><span class="Bold">LTV </span></td>
+		<td style="width: 8%" class="RAGRed"><div  class="RAGRed" align="right">75.00</div ></td>
+	</tr>
+	<tr>
+		<td><span class="Bold">Tax Rate</span></td>
+		<td>HIGHR</td>
+		<td><span class="Bold">Monthly Rental Income</span></td>
+		<td><div  align="right">&#163;675.00</div ></td>
+		<td><span class="Bold">Calculated Payment at Applicable Rate (4.000%)</span></td>
+		<td><div  align="right">&#163;458.75</div ></td>
+		<td><span class="Bold">ICR</span></td>
+		<td class="RAGAmber"><div  align="right">147.14</div ></td>
+	</tr>
+	<tr style="display:none">
+		<td></td>
+		<td></td>
+		<td><span class="Bold">Holiday Let Rental Income</span></td>
+		<td><div  align="right">&#163;0.00</div ></td>
+		<td></td>
+		<td></td>
+		<td><span class="Bold">Holiday Let ICR</span></td>
+		<td class=""><div  align="right">.00</div ></td>
+	</tr>
+	<tr>
+		<td><span class="Bold">LTB</span></td>
+		<td>N</td>
+		<td class="Bold" rowspan="2">Repayment Type</td>
+		<td rowspan="2">Repayment</td>
+		<td rowspan="2"><span class="Bold" style="">Credit Score</span></td>
+		<td rowspan="2"><span style="">461</span></td>
+		<td rowspan="2"><span class="Bold">Tenure</span></td>
+		<td rowspan="2">Freehold</td>
+	</tr>
+	<tr>
+		<td><span class="Bold">CBTL</span></td>
+		<td>N</td>
+	</tr>
+</table><br/></span></div ></span><div  align="left"><a id="wt616_wtMainContent_wt141" tabindex="30" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt141&#39;,&#39;wt616$wtMainContent$wt141&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Applicant Profile</label></a></div ><span id="wt616_wtMainContent_wtApplicants"><div ><table class="TableRecords OSFillParent">
+	<tr>
+		<td style="width: 40%"></td>
+		<td style="width: 15%"><label class=' Bold OSFillParent' style='' for='' >App 1</label></td>
+		<td style="width: 15%"><label class=' Bold OSFillParent' style='' for='' >App 2</label></td>
+		<td style="width: 15%"><label class=' Bold OSFillParent' style='' for='' >App 3</label></td>
+		<td style="width: 15%"><label class=' Bold OSFillParent' style='' for='' >App 4</label></td>
+	</tr>
+	<tr>
+		<td style="width: 40%"><label class=' Bold OSFillParent' style='' for='' >Name</label></td>
+		<td style="width: 15%">Mr Nimesh Pau</td>
+		<td style="width: 15%">Mr Rupesh Morjaria</td>
+		<td style="width: 15%">Mr Gurprit Deo</td>
+		<td style="width: 15%">Mr Jay Morjaria</td>
+	</tr>
+	<tr style="">
+		<td><label class=' Bold OSFillParent' style='' for='' >ID/Voters Roll</label></td>
+		<td>2003-2021</td>
+		<td>2012-2021</td>
+		<td><input name="wt616$wtMainContent$wt110" type="number" value="2019" maxlength="4" id="wt616_wtMainContent_wt110" tabindex="31" class="ThemeGrid_Width4" onchange="OsLimitInput(this,event,4);" onkeyup="OsLimitInput(this,event,4);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt110"></span>-<input name="wt616$wtMainContent$wt565" type="number" value="2021" maxlength="4" id="wt616_wtMainContent_wt565" tabindex="32" class="ThemeGrid_Width4 ThemeGrid_MarginGutter" onchange="OsLimitInput(this,event,4);" onkeyup="OsLimitInput(this,event,4);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt565"></span></td>
+		<td><input name="wt616$wtMainContent$wt240" type="number" value="2015" maxlength="4" id="wt616_wtMainContent_wt240" tabindex="33" class="ThemeGrid_Width4" onchange="OsLimitInput(this,event,4);" onkeyup="OsLimitInput(this,event,4);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt240"></span>-<input name="wt616$wtMainContent$wt46" type="number" value="2021" maxlength="4" id="wt616_wtMainContent_wt46" tabindex="34" class="ThemeGrid_Width4 ThemeGrid_MarginGutter" onchange="OsLimitInput(this,event,4);" onkeyup="OsLimitInput(this,event,4);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt46"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Country of Birth</label></td>
+		<td>UNITED KINGDOM</td>
+		<td>KENYA</td>
+		<td>UNITED KINGDOM</td>
+		<td>KENYA</td>
+	</tr>
+	<tr style="display:none">
+		<td><label class=' Bold OSFillParent' style='' for='' >Country of Residence</label></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >RTR required (consider risk)</label></td>
+		<td>N</td>
+		<td>Y</td>
+		<td>N</td>
+		<td>Y</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >High Risk Country</label></td>
+		<td>N</td>
+		<td>N</td>
+		<td>N</td>
+		<td>N</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Age at Start & End</label></td>
+		<td>42/67</td>
+		<td>47/72</td>
+		<td>42/67</td>
+		<td>42/67</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Employment Type</label></td>
+		<td>S</td>
+		<td>S</td>
+		<td>E</td>
+		<td>S</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Income</label></td>
+		<td>&#163;233,825.00</td>
+		<td>&#163;88,188.00</td>
+		<td>&#163;48,018.00</td>
+		<td>&#163;22,199.00</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Time Employed/Self Employed</label></td>
+		<td>13 Yr(s) 0 Mth(s)</td>
+		<td>15 Yr(s) 0 Mth(s)</td>
+		<td>10 Yr(s) 0 Mth(s)</td>
+		<td>15 Yr(s) 0 Mth(s)</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Occupation</label></td>
+		<td>Director</td>
+		<td>Optician</td>
+		<td>Forecasting Manager</td>
+		<td>Director</td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Total Exposure</label></td>
+		<td>&#163;449,563.88</td>
+		<td>&#163;230,586.86</td>
+		<td>&#163;230,586.86</td>
+		<td>&#163;230,586.86</td>
+	</tr>
+	<tr style="">
+		<td><label class=' Bold OSFillParent' style='' for='' >Total Unsecured Debt</label></td>
+		<td>&#163;2,274.00</td>
+		<td>&#163;412.00</td>
+		<td><input name="wt616$wtMainContent$wt211" type="number" value="1626.00" maxlength="15" id="wt616_wtMainContent_wt211" tabindex="35" class="input ThemeGrid_Width4" onchange="OsLimitInput(this,event,15);" onkeyup="OsLimitInput(this,event,15);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt211"></span></td>
+		<td><input name="wt616$wtMainContent$wt385" type="number" value="7711.00" maxlength="15" id="wt616_wtMainContent_wt385" tabindex="36" class="input ThemeGrid_Width4" onchange="OsLimitInput(this,event,15);" onkeyup="OsLimitInput(this,event,15);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt385"></span></td>
+	</tr>
+	<tr style="">
+		<td><label class=' Bold OSFillParent' style='' for='' >Monthly unsecured pmt amount</label></td>
+		<td>&#163;68.22</td>
+		<td>&#163;9.06</td>
+		<td><input name="wt616$wtMainContent$wt170" type="number" value="48.78" maxlength="15" id="wt616_wtMainContent_wt170" tabindex="37" class="input ThemeGrid_Width4" onchange="OsLimitInput(this,event,15);" onkeyup="OsLimitInput(this,event,15);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt170"></span></td>
+		<td><input name="wt616$wtMainContent$wt72" type="number" value="231.33" maxlength="15" id="wt616_wtMainContent_wt72" tabindex="38" class="input ThemeGrid_Width4" onchange="OsLimitInput(this,event,15);" onkeyup="OsLimitInput(this,event,15);" aria-invalid="false" /><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt72"></span></td>
+	</tr>
+</table><div class='form-left Form ThemeGrid_Width6' style='' id='wt616_wtMainContent_wtForm1' name='wt616$wtMainContent$wtForm1'></div><script type="text/javascript">outsystems.internal.$(function() { OutSystems.Plugin.Widgets.Form.init('wt616_wtMainContent_wtForm1');});</script></div ></span><div  align="left"><a id="wt616_wtMainContent_wt316" tabindex="39" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt316&#39;,&#39;wt616$wtMainContent$wt316&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Comments</label></a></div ><span id="wt616_wtMainContent_wtComments"><div ><table class="TableRecords OSFillParent">
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >KYC/AML Checks</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wt598" rows="4" id="wt616_wtMainContent_wt598" tabindex="40" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt598&#39;,&#39;wt616$wtMainContent$wt598&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt598&#39;,&#39;wt616$wtMainContent$wt598&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Medium risk - UK born applicants, &#163;45,875 deposit required -  advised this will be from the re-mortgage of another property, high levels of equity noted within the portfolio.
+SoW: No concerns, well established portfolio and long term Paragon customers.
+KYC: ER/EC used.
+RTR: A2 &amp; A4 have both been on the VR &gt;5 years and have credit &amp; jobs within the UK over this length of time also - happy to proceed without requesting further proof.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt598"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Higher Mandate Referral Reasons</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wtReferral" rows="4" id="wt616_wtMainContent_wtReferral" tabindex="41" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wtReferral&#39;,&#39;wt616$wtMainContent$wtReferral&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wtReferral&#39;,&#39;wt616$wtMainContent$wtReferral&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">REL 19  Corporate Score &gt;30 &amp; &lt;=40, Incorp &gt;21mnths, Accts sub = Y</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wtReferral"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Proposal</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wtProposal" rows="4" id="wt616_wtMainContent_wtProposal" tabindex="42" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wtProposal&#39;,&#39;wt616$wtMainContent$wtProposal&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wtProposal&#39;,&#39;wt616$wtMainContent$wtProposal&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Limited company purchase of a SSCU property in Leicester.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wtProposal"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Background Details</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wt346" rows="4" id="wt616_wtMainContent_wt346" tabindex="43" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt346&#39;,&#39;wt616$wtMainContent$wt346&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt346&#39;,&#39;wt616$wtMainContent$wt346&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Existing Paragon customers since 2006 with two live mortgage accounts - payment history is good on both accounts, noted some slows on one of the live accounts shortly after its completion in &#39;06 but no issues since that point, may have been a problem setting up the DD initially - no concerns. 
+No Payment holidays taken on Paragon accounts during the Covid-19 pandemic.
+App 1: The applicant is married, living at their current un-encumbered residential home for 17y 10m.
+App 2: The applicant is married, living at their current un-encumbered residential home for 8y 7m.
+App 3: The applicant is married, living at their current residential home for 1y 3m with family.
+App 4: The applicant is married, living at their current un-encumbered residential home for 9y 1m.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt346"></span></td>
+	</tr>
+	<tr>
+		<td style="width: 20%"><label class=' Bold OSFillParent' style='' for='' >Director and company search findings</label></td>
+		<td style="width: 80%"><textarea name="wt616$wtMainContent$wt368" rows="4" id="wt616_wtMainContent_wt368" tabindex="44" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt368&#39;,&#39;wt616$wtMainContent$wt368&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt368&#39;,&#39;wt616$wtMainContent$wt368&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">STRIKE PROPERTIES LIMITED
+Score 36, SHF &#163;9,406
+Company Number	050726677
+Incorporation Date	01-03-2006
+SIC07 Description      DEVELOPMENT OF BUILDING PROJECTS  
+App 4 is the sole director of the company, each of the four applicants owns 25% of the company shares.
+Purchase of a 2nd property in the subject company.
+
+
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt368"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Rental Bank Statement Assessment</label></td>
+		<td><textarea name="wt616$wtMainContent$wt216" rows="4" id="wt616_wtMainContent_wt216" tabindex="45" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt216&#39;,&#39;wt616$wtMainContent$wt216&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt216&#39;,&#39;wt616$wtMainContent$wt216&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">xxxx2949, 05/02/21-04/05/21
+Joint personal name (App 2 &amp; wife )acc. - Natwest
+No conduct concerns - positive cashflow throughout.
+Rental income noted via transfers from tenants, appears to be in line with property schedule figures.
+Closing balance 04/05/21 = &#163;19,206
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxx5130, 26/01/21-20/05/21
+Joint personal name (App 1 &amp; wife) acc. - Lloyds Bank
+No conduct concerns - positive cashflow throughout.
+Rental income noted, appears to be in-line.
+Mortgage payments to Lloyds, TMW &amp; Fleet noted in line with the information on the schedule.
+Closing balance 20/05/21 = &#163;72,849
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxx6325, 27/01/21-26/04/21
+Sole personal name acc. - Barclays
+Positive balances noted throughout but the format of the statements received does not show any transactions - this appears to be an error with the PDF document provided.
+Closing balance 26/04/21 = &#163;11,169
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxx3062, 18/12/20-18/05/21
+Level Arch Investments Limited business acc. - Lloyds Bank
+No conduct concerns - positive cashflow throughout.
+Rental income noted, appears to be in line with the information on the property schedule.
+Closing balance 18/05/21 = &#163;20,611
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt216"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Income</label></td>
+		<td><textarea name="wt616$wtMainContent$wt10" rows="4" id="wt616_wtMainContent_wt10" tabindex="46" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt10&#39;,&#39;wt616$wtMainContent$wt10&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt10&#39;,&#39;wt616$wtMainContent$wt10&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">A1 - Mr N Pau
+Tax Calc &amp; matching 20 TYO
+                                                  2020                2019
+Employment                        12,000           12,000
+Dividends                          200,539         222,601
+Interest                                      7,117              8,959
+UK Land &amp; Prop                46,533            49,164
+Resi fin Costs                    (25,247)          (13,736)
+Actual L&amp;P                           21,286            35,428
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A2 - Mr R Morjaria
+Tax Calc &amp; matching TYOs
+                                                  2020                2019
+Employment                      43,245           43,674
+Dividends                            28,696           67,989
+Interest                                             4                    113
+UK Land &amp; Prop                22,041            18,465
+Resi fin Costs                     (5,794)             (3,412)
+Actual L&amp;P                          16,247            15,053
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+A3 - Mr Gurprit Deo
+Payslips received for Jan, Feb, and Mar 21. 
+Basic &#163;4,001.54 * 12 = &#163;48,018 pa.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A4 - Mr J Morjaria
+Tax Calcs and matching TYOs 
+                                                  2020                2019
+Employment                      16,720            21,379
+Dividends                               2,152                  294
+Interest                                            4                        1
+UK Land &amp; Prop                 3,327              2,360
+Resi fin Costs                                -                         -
+Actual L&amp;P                           3,327              2,360
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt10"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Credit History and Assessment</label></td>
+		<td><textarea name="wt616$wtMainContent$wt92" rows="4" id="wt616_wtMainContent_wt92" tabindex="47" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt92&#39;,&#39;wt616$wtMainContent$wt92&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt92&#39;,&#39;wt616$wtMainContent$wt92&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">A1 &amp; A2:
+Credit Grade: 2 
+Risk Navigator Score: 496 (average)
+Low unsecured - this is split across a number of CC balances with low combined utilisation noted, all credit is A1 paid. 
+Number of comms slows noted on one account - no concerns. 
+
+New credit search carried out at offer stage (9/6/21):
+IRB grade unchanged, RN score has dropped to 461 - no concerns.
+Slight drop to total unsecured credit.
+A1 conduct has continued on credit items.
+
+A3 (manual search):
+Risk Navigator Score: 503 (good)
+Low unsecured split between two CC balances with low combined utilisation, all credit items A1 paid.
+Mortgages listed are also all A1 paid.
+
+A4 (manual search):
+Risk Navigator Score: 378 (below average)
+Reasonable level of unsecured credit split across a number of CC balances with low combined utilisation, all A1 paid.
+Mortgages listed are also all A1 paid.
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt92"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Business Plan, Net Worth Statement and Cashflow Forecast (findings or mitigation) (PROPORT node id)</label></td>
+		<td><textarea name="wt616$wtMainContent$wt274" rows="4" id="wt616_wtMainContent_wt274" tabindex="48" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt274&#39;,&#39;wt616$wtMainContent$wt274&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt274&#39;,&#39;wt616$wtMainContent$wt274&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">All three waived - Experienced landlords with an established portfolio with strong RAG metrics, no concerns over cash flow or other assets.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt274"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Underwriter Judgement (Yes or No)(UWJUDGE note id)</label></td>
+		<td><textarea name="wt616$wtMainContent$wt520" rows="4" id="wt616_wtMainContent_wt520" tabindex="49" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt520&#39;,&#39;wt616$wtMainContent$wt520&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt520&#39;,&#39;wt616$wtMainContent$wt520&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">None used.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt520"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Security Information</label></div ></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Land Reg (Details of the PP, proprietor, charge, lease term, restrictions)</label></td>
+		<td><textarea name="wt616$wtMainContent$wt374" rows="4" readonly="readonly" id="wt616_wtMainContent_wt374" tabindex="50" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt374&#39;,&#39;wt616$wtMainContent$wt374&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt374&#39;,&#39;wt616$wtMainContent$wt374&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">5217923: SWARAN KAUR                                                  Purchased for &#163;135000.00 Transfer/Purchase Date 15.07.2005            Existing Charge Holder None                                         
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt374"></span><textarea name="wt616$wtMainContent$wt378" rows="4" id="wt616_wtMainContent_wt378" tabindex="51" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt378&#39;,&#39;wt616$wtMainContent$wt378&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt378&#39;,&#39;wt616$wtMainContent$wt378&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);"></textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt378"></span></td>
+	</tr>
+	<tr>
+		<td><label class=' Bold OSFillParent' style='' for='' >Valuation (mitigate any risk factors or marginal elements)</label></td>
+		<td><textarea name="wt616$wtMainContent$wt128" rows="4" id="wt616_wtMainContent_wt128" tabindex="52" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt128&#39;,&#39;wt616$wtMainContent$wt128&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt128&#39;,&#39;wt616$wtMainContent$wt128&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Valuation = &#163;183,500/&#163;675pcm
+Average rental demand and suitability
+The general condition of the property appears consistent with its age and type of construction. 
+Ongoing maintenance and repairs will be required and there is scope for modernisation. 
+Conditions added as per recommendations on the report.</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt128"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Recommendation / Justification (highlight and mitigate all risk factors)</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wt102" rows="4" id="wt616_wtMainContent_wt102" tabindex="53" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt102&#39;,&#39;wt616$wtMainContent$wt102&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt102&#39;,&#39;wt616$wtMainContent$wt102&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Experienced landlords with a well established portfolio of properties local to the applicants&#39; home addresses.
+Good credit profile - Low unsecured for each of the four applicants, all o/s credit is also A1 paid as are the mortgages.
+Strong RAG metrics for the portfolio as a whole &amp; rental income/mortgage payments validated from bank statements on file. 
+Good level of cash reserves noted which equate to approx. 8-9 months mortgage payments for the portfolio.
+The surveyor has confirmed that the property forms suitable mortgage security.
+Happy to proceed to offer.
+R Minshull 9/6/21
+
+
+
+</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt102"></span></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div  align="center"><label class=' Bold OSFillParent' style='' for='' >Higher Level Sign-Off Comments</label></div ></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="wt616$wtMainContent$wt39" rows="4" id="wt616_wtMainContent_wt39" tabindex="54" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt39&#39;,&#39;wt616$wtMainContent$wt39&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt39&#39;,&#39;wt616$wtMainContent$wt39&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Accounts for the subject company appear to be missing. Can we request please. Happy with remainder of the case. Lisa Scranage 11/06/21</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt39"></span></td>
+	</tr>
+</table></div ></span><div  align="left"><a id="wt616_wtMainContent_wt493" tabindex="55" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt493&#39;,&#39;wt616$wtMainContent$wt493&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Property Schedule</label></a></div ><span id="wt616_wtMainContent_wtSchedule"><div  align="center"><table class="TableRecords OSFillParent">
+	<tr>
+		<td class="Bold" style="width: 17%">Overall Portfolio LTV </td>
+		<td class="Bold" style="width: 16%">Overall Portfolio ICR (calculated at ref rate of 5.5% on current balance)</td>
+		<td class="Bold" style="width: 17%">Geographic Radius to applicants residence</td>
+		<td class="Bold" style="width: 17%">Alternative source of income</td>
+		<td class="Bold" style="width: 16%">Letting Experience</td>
+		<td class="Bold" style="width: 17%">RN Score</td>
+	</tr>
+	<tr>
+		<td class="RAGGreen"><div  align="center">29.66</div ></td>
+		<td class="RAGGreen"><div  align="center">205.40</div ></td>
+		<td><div  align="center"></div ></td>
+		<td><div  align="center"></div ></td>
+		<td class="RAGGreen"><div  align="center">14</div ></td>
+		<td class="RAGAmber"><div  align="center">461</div ></td>
+	</tr>
+</table><table class="TableRecords OSFillParent">
+	<tr>
+		<td style="width: 20%"><label class=' Bold OSFillParent' style='' for='' >Property Schedule Assessment</label></td>
+		<td style="width: 80%"><textarea name="wt616$wtMainContent$wt461" rows="4" id="wt616_wtMainContent_wt461" tabindex="56" class="OSFillParent" onchange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt461&#39;,&#39;wt616$wtMainContent$wt461&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,0);" onkeyup="OsLimitInput(this,event,30000);" aria-invalid="false" onoschange="OsAjaxDelayed(null,&#39;wt616_wtMainContent_wt461&#39;,&#39;wt616$wtMainContent$wt461&#39;,&#39;Change&#39;,&#39;__OSVSTATE,&#39;,osOnChangeTimerDelay);">Experienced landlord with a portfolio of 27 properties, these are located in the midlands, mostly in Coventry which is where the applicants also live.
+Low gearing and good rental coverage noted at the stress rate of 5.5%</textarea><span style="display: none;" class="ValidationMessage" role="alert" id="ValidationMessage_wt616_wtMainContent_wt461"></span></td>
+	</tr>
+</table><div  class="ThemeGrid_Width6"><table class="TableRecords OSFillParent">
+	<tr>
+		<td class="Bold" style="width: 33%">Number of mortgages properties</td>
+		<td class="Bold" style="width: 33%">Number of unencumbered</td>
+		<td class="Bold" style="width: 34%">Total number of properties</td>
+	</tr>
+	<tr>
+		<td><div  align="center">28</div ></td>
+		<td><div  align="center">0</div ></td>
+		<td><div  align="center">28</div ></td>
+	</tr>
+</table></div ><table class="TableRecords OSFillParent" cellspacing="0" id="wt616_wtMainContent_wtScheduleTable">
+	<thead>
+		<tr>
+			<th class="TableRecords_Header">Proprietor</th><th class="TableRecords_Header">Address</th><th class="TableRecords_Header">Post Code</th><th class="TableRecords_Header">HMO</th><th class="TableRecords_Header">Multi Unit</th><th class="TableRecords_Header">Unencum bered?</th><th class="TableRecords_Header">Lender</th><th class="TableRecords_Header">Current Loan Balance</th><th class="TableRecords_Header">Monthly Payment</th><th class="TableRecords_Header">Estimated Value</th><th class="TableRecords_Header">Rental Income</th><th class="TableRecords_Header">Months Owned</th><th class="TableRecords_Header">Tenanted?</th><th class="TableRecords_Header">LTV</th><th class="TableRecords_Header">Rental Coverage</th><th class="TableRecords_Header">Schedule Date</th>
+		</tr>
+	</thead><tbody>
+		<tr>
+			<td class="TableRecords_OddLine">G Deo</td><td class="TableRecords_OddLine">60 Harlech Road,</td><td class="TableRecords_OddLine">WD50BF</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Nat West</td><td class="TableRecords_OddLine"><div  align="right">&#163;255,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,225.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;450,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,350.00</div ></td><td class="TableRecords_OddLine"><div  align="right">63</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">56.67</div ></td><td class="TableRecords_OddLine"><div  align="right">110.20</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_EvenLine">G Deo</td><td class="TableRecords_EvenLine">TOTALS</td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;255,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;1,225.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;450,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;1,350.00</div ></td><td class="TableRecords_EvenLine"><div  align="right"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="right">56.67</div ></td><td class="TableRecords_EvenLine"><div  align="right">110.20</div ></td><td class="TableRecords_EvenLine"></td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Highgrove Estates Ltd</td><td class="TableRecords_OddLine">22 Fullers Ave,</td><td class="TableRecords_OddLine">WD259BU</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Precise</td><td class="TableRecords_OddLine"><div  align="right">&#163;511,097.86</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;2,564.95</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;652,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;2,100.00</div ></td><td class="TableRecords_OddLine"><div  align="right">17</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">78.39</div ></td><td class="TableRecords_OddLine"><div  align="right">81.87</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_EvenLine">Highgrove Estates Ltd</td><td class="TableRecords_EvenLine">TOTALS</td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;511,097.86</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;2,564.95</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;652,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;2,100.00</div ></td><td class="TableRecords_EvenLine"><div  align="right"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="right">78.39</div ></td><td class="TableRecords_EvenLine"><div  align="right">81.87</div ></td><td class="TableRecords_EvenLine"></td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Lever Arch Investments Ltd</td><td class="TableRecords_OddLine">6 Eld Road,</td><td class="TableRecords_OddLine">CV65BZ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;115,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;680.00</div ></td><td class="TableRecords_OddLine"><div  align="right">60</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">Lever Arch Investments Ltd</td><td class="TableRecords_EvenLine">8 Eld Road,</td><td class="TableRecords_EvenLine">CV65BZ</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;115,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;775.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">60</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Lever Arch Investments Ltd</td><td class="TableRecords_OddLine">10 Eld Road,</td><td class="TableRecords_OddLine">Cv65BZ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;115,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;775.00</div ></td><td class="TableRecords_OddLine"><div  align="right">60</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">Lever Arch Investments Ltd</td><td class="TableRecords_EvenLine">Lodge Farm House,</td><td class="TableRecords_EvenLine">CV48AA</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;950,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;1,613.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">48</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_OddLine">Lever Arch Investments Ltd</td><td class="TableRecords_OddLine">TOTALS</td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,295,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;3,843.00</div ></td><td class="TableRecords_OddLine"><div  align="right"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"></td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">Mantilla Ltd</td><td class="TableRecords_EvenLine">32 Mantilla Drive,</td><td class="TableRecords_EvenLine">CV66LQ</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;426,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;850.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">8</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Mantilla Ltd</td><td class="TableRecords_OddLine">34 Mantilla Drive,</td><td class="TableRecords_OddLine">CV36LQ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Paragon</td><td class="TableRecords_OddLine"><div  align="right">&#163;220,331.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;542.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;412,500.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,100.00</div ></td><td class="TableRecords_OddLine"><div  align="right">1</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">53.41</div ></td><td class="TableRecords_OddLine"><div  align="right">202.95</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_EvenLine">Mantilla Ltd</td><td class="TableRecords_EvenLine">TOTALS</td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;220,331.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;542.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;838,500.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;1,950.00</div ></td><td class="TableRecords_EvenLine"><div  align="right"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="right">26.28</div ></td><td class="TableRecords_EvenLine"><div  align="right">359.78</div ></td><td class="TableRecords_EvenLine"></td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">1 Howard Mews,</td><td class="TableRecords_OddLine">CV36TX</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;40,263.30</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;700.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;230,047.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;760.00</div ></td><td class="TableRecords_OddLine"><div  align="right">131</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">17.50</div ></td><td class="TableRecords_OddLine"><div  align="right">108.57</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">280 Harrison Rd,</td><td class="TableRecords_EvenLine">LE46QL</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;38,251.35</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;700.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;180,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;535.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">126</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">21.25</div ></td><td class="TableRecords_EvenLine"><div  align="right">76.43</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">39 Jeremy Cl,</td><td class="TableRecords_OddLine">LE45DX</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;38,357.71</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;281.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;152,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;540.00</div ></td><td class="TableRecords_OddLine"><div  align="right">116</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">25.24</div ></td><td class="TableRecords_OddLine"><div  align="right">192.17</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">2 Kilmelford Cl,</td><td class="TableRecords_EvenLine">LE47YF</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;51,104.41</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;360.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;220,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;630.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">110</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">23.23</div ></td><td class="TableRecords_EvenLine"><div  align="right">175.00</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">17 Jeremy Cl,</td><td class="TableRecords_OddLine">LE45DX</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;47,644.19</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;338.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;152,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;540.00</div ></td><td class="TableRecords_OddLine"><div  align="right">107</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">31.34</div ></td><td class="TableRecords_OddLine"><div  align="right">159.76</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">38 Kingcraig Rd,</td><td class="TableRecords_EvenLine">LE47YB</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;41,151.97</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;300.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;201,403.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;590.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">98</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">20.43</div ></td><td class="TableRecords_EvenLine"><div  align="right">196.67</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">17 Shearer Cl,</td><td class="TableRecords_OddLine">LE47TQ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Lloyds TSB</td><td class="TableRecords_OddLine"><div  align="right">&#163;67,060.02</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;285.14</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;169,465.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;525.00</div ></td><td class="TableRecords_OddLine"><div  align="right">92</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">39.57</div ></td><td class="TableRecords_OddLine"><div  align="right">184.12</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">4 Kendal Rd,</td><td class="TableRecords_EvenLine">LE47GP</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;93,417.52</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;383.31</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;220,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;590.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">82</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">42.46</div ></td><td class="TableRecords_EvenLine"><div  align="right">153.92</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">9 Coles Cl,</td><td class="TableRecords_OddLine">LE47SY</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">TMW</td><td class="TableRecords_OddLine"><div  align="right">&#163;75,642.32</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;636.77</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;222,749.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;635.00</div ></td><td class="TableRecords_OddLine"><div  align="right">63</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">33.96</div ></td><td class="TableRecords_OddLine"><div  align="right">99.72</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">6 Cedar Cres,</td><td class="TableRecords_EvenLine">WD232FS</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Lloyds TSB</td><td class="TableRecords_EvenLine"><div  align="right">&#163;296,666.51</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;2,060.44</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;605,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;2,350.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">63</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">49.04</div ></td><td class="TableRecords_EvenLine"><div  align="right">114.05</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">59 Charles Bennion Walk,</td><td class="TableRecords_OddLine">L45HU</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">TMW</td><td class="TableRecords_OddLine"><div  align="right">&#163;128,525.83</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;671.74</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;219,627.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;735.00</div ></td><td class="TableRecords_OddLine"><div  align="right">53</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">58.52</div ></td><td class="TableRecords_OddLine"><div  align="right">109.42</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">36 Kerrysdale Ave,</td><td class="TableRecords_EvenLine">LE47GH</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">TMW</td><td class="TableRecords_EvenLine"><div  align="right">&#163;104,980.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;613.82</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;176,902.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;590.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">50</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">59.34</div ></td><td class="TableRecords_EvenLine"><div  align="right">96.12</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">72 Kenilworth Rd,</td><td class="TableRecords_OddLine">CV47AH</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,158,832.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">47</div ></td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">106A Ross Walk,</td><td class="TableRecords_EvenLine">LE45HH</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">TMW</td><td class="TableRecords_EvenLine"><div  align="right">&#163;107,477.64</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;882.05</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;209,320.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;770.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">47</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">51.35</div ></td><td class="TableRecords_EvenLine"><div  align="right">87.30</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">28 Courtelle Rd,</td><td class="TableRecords_OddLine">CV65FW</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Fleet</td><td class="TableRecords_OddLine"><div  align="right">&#163;100,975.20</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;706.98</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;212,613.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;740.00</div ></td><td class="TableRecords_OddLine"><div  align="right">38</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">47.49</div ></td><td class="TableRecords_OddLine"><div  align="right">104.67</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">N &amp; D Pau</td><td class="TableRecords_EvenLine">30 Courtelle Rd,</td><td class="TableRecords_EvenLine">CV65FW</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Fleet</td><td class="TableRecords_EvenLine"><div  align="right">&#163;100,975.20</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;706.98</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;212,613.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;740.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">38</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">47.49</div ></td><td class="TableRecords_EvenLine"><div  align="right">104.67</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_OddLine">N &amp; D Pau</td><td class="TableRecords_OddLine">TOTALS</td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;1,332,493.17</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;9,626.23</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;4,542,571.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;11,270.00</div ></td><td class="TableRecords_OddLine"><div  align="right"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="right">29.33</div ></td><td class="TableRecords_OddLine"><div  align="right">117.08</div ></td><td class="TableRecords_OddLine"></td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">R Morjaria</td><td class="TableRecords_EvenLine">104 Leire Street,</td><td class="TableRecords_EvenLine">LE46NT</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;150,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;650.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">120</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">0.00</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_OddLine">R Morjaria</td><td class="TableRecords_OddLine">TOTALS</td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;150,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;650.00</div ></td><td class="TableRecords_OddLine"><div  align="right"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"></td>
+		</tr><tr>
+			<td class="TableRecords_EvenLine">Romavi Ltd</td><td class="TableRecords_EvenLine">140 Harrington Street,</td><td class="TableRecords_EvenLine">LE46ES</td><td class="TableRecords_EvenLine"><div  align="center">N</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine">Precise</td><td class="TableRecords_EvenLine"><div  align="right">&#163;120,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;365.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;157,500.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;825.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">5</div ></td><td class="TableRecords_EvenLine"><div  align="center">Y</div ></td><td class="TableRecords_EvenLine"><div  align="right">76.19</div ></td><td class="TableRecords_EvenLine"><div  align="right">226.03</div ></td><td class="TableRecords_EvenLine">27-05-2021</td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Romavi Ltd</td><td class="TableRecords_OddLine">37 Redpath Close,</td><td class="TableRecords_OddLine">LE46DZ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;175,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;950.00</div ></td><td class="TableRecords_OddLine"><div  align="right">2</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine"><div  align="right">0.00</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_EvenLine">Romavi Ltd</td><td class="TableRecords_EvenLine">TOTALS</td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;120,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;365.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;332,500.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;1,775.00</div ></td><td class="TableRecords_EvenLine"><div  align="right"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="right">36.09</div ></td><td class="TableRecords_EvenLine"><div  align="right">486.30</div ></td><td class="TableRecords_EvenLine"></td>
+		</tr><tr>
+			<td class="TableRecords_OddLine">Strike Properties Ltd</td><td class="TableRecords_OddLine">10 Odell Place,</td><td class="TableRecords_OddLine">B57RQ</td><td class="TableRecords_OddLine"><div  align="center">N</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine">Paragon</td><td class="TableRecords_OddLine"><div  align="right">&#163;56,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;480.60</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;150,000.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;550.00</div ></td><td class="TableRecords_OddLine"><div  align="right">168</div ></td><td class="TableRecords_OddLine"><div  align="center">Y</div ></td><td class="TableRecords_OddLine"><div  align="right">37.33</div ></td><td class="TableRecords_OddLine"><div  align="right">114.44</div ></td><td class="TableRecords_OddLine">27-05-2021</td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_EvenLine">Strike Properties Ltd</td><td class="TableRecords_EvenLine">TOTALS</td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"></td><td class="TableRecords_EvenLine"><div  align="right">&#163;56,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;480.60</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;150,000.00</div ></td><td class="TableRecords_EvenLine"><div  align="right">&#163;550.00</div ></td><td class="TableRecords_EvenLine"><div  align="right"></div ></td><td class="TableRecords_EvenLine"><div  align="center"></div ></td><td class="TableRecords_EvenLine"><div  align="right">37.33</div ></td><td class="TableRecords_EvenLine"><div  align="right">114.44</div ></td><td class="TableRecords_EvenLine"></td>
+		</tr><tr class="ScheduleTotal">
+			<td class="TableRecords_OddLine">OVERALL TOTALS</td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"></td><td class="TableRecords_OddLine"><div  align="right">&#163;2,494,922.03</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;14,803.78</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;8,410,571.00</div ></td><td class="TableRecords_OddLine"><div  align="right">&#163;23,488.00</div ></td><td class="TableRecords_OddLine"><div  align="right"></div ></td><td class="TableRecords_OddLine"><div  align="center"></div ></td><td class="TableRecords_OddLine"><div  align="right">29.66</div ></td><td class="TableRecords_OddLine"><div  align="right">158.66</div ></td><td class="TableRecords_OddLine"></td>
+		</tr>
+	</tbody>
+</table></div ></span><div  align="left"><a id="wt616_wtMainContent_wt137" tabindex="57" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt137&#39;,&#39;wt616$wtMainContent$wt137&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Mortgage Conditions</label></a></div ><span id="wt616_wtMainContent_wtConditions"><div ><span id="wt616_wtMainContent_wtDetailList2" class="ListRecords"><table class="TableRecords OSFillParent">
+	<tr>
+		<td style="width: 17%"><span class="Bold">Account </span></td>
+		<td style="width: 8%">5217923</td>
+		<td style="width: 17%"><span class="Bold">Property</span></td>
+		<td style="width: 58%">258 Avenue Road Extension, LE2 3EL</td>
+	</tr>
+	<tr>
+		<td style="width: 17%" colspan="4"><table class="TableRecords OSFillParent" cellspacing="0" id="wt616_wtMainContent_wtDetailList2_ctl00_wt126_wtTableRecords1" style="margin-top: 0px;">
+			<tr>
+				<td class="TableRecords_OddLine" style="width:17%;">H50</td><td class="TableRecords_OddLine" style="width:83%;">Ad-hoc offer condition</td>
+			</tr>
+		</table></td>
+	</tr>
+</table><br/></span></div ></span><div  align="left"><a id="wt616_wtMainContent_wt381" tabindex="58" onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt381&#39;,&#39;wt616$wtMainContent$wt381&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" href="#"><label class=' ThemeGrid_Width2' style='' for='' >Action Points</label></a></div ><span id="wt616_wtMainContent_wtActionPoints"><table class="TableRecords OSFillParent" cellspacing="0" id="wt616_wtMainContent_wtTableRecords2">
+	<tr>
+		<td class="TableRecords_OddLine">Accounts.</td>
+	</tr>
+</table></span><div  id="wt616_wtMainContent_wtButtons"><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt3&#39;,&#39;wt616$wtMainContent$wt3&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt3" value="Save" id="wt616_wtMainContent_wt3" tabindex="59" class="Button" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt179&#39;,&#39;wt616$wtMainContent$wt179&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt179" value="Exit" id="wt616_wtMainContent_wt179" tabindex="60" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtViewSnapshot&#39;,&#39;wt616$wtMainContent$wtViewSnapshot&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtViewSnapshot" value="View" id="wt616_wtMainContent_wtViewSnapshot" tabindex="61" class="Button ThemeGrid_MarginGutter" /><input onclick="var ret = confirm(&#39;This will be closed down and will no longer be editable - are you sure ?&#39;);if( ret != true ) {return false;}OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt458&#39;,&#39;wt616$wtMainContent$wt458&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt458" value="Lockdown" id="wt616_wtMainContent_wt458" tabindex="62" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtSnapshotButton&#39;,&#39;wt616$wtMainContent$wtSnapshotButton&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtSnapshotButton" value="Snapshot" id="wt616_wtMainContent_wtSnapshotButton" tabindex="63" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wtCopyButton&#39;,&#39;wt616$wtMainContent$wtCopyButton&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wtCopyButton" value="Copy" id="wt616_wtMainContent_wtCopyButton" tabindex="65" class="Button ThemeGrid_MarginGutter" /><input onclick="OsAjax(arguments[0] || window.event,&#39;wt616_wtMainContent_wt528&#39;,&#39;wt616$wtMainContent$wt528&#39;,&#39;&#39;,&#39;__OSVSTATE,&#39;,&#39;&#39;); return false;" type="submit" name="wt616$wtMainContent$wt528" value="Printable Version" id="wt616_wtMainContent_wt528" tabindex="69" class="Button ThemeGrid_MarginGutter" /></div ></section ></div ></div ><footer  id="wt616_wtFooter" class="Footer"><div >Built with <a id="wt616_wtFooter_wt498_wt2" tabindex="71" title="Custom Enterprise Web Application Development Platform" href="http://www.outsystems.com/ce/web-application-development/">OutSystems</a></div ></footer ><script>SilkDeviceDetect.init('desktop small', false, false, 'chrome', false, false, false)</script><div  id="wt616_WebPatterns_wt8_block_wt13_wtdivWait" class="Feedback_AjaxWait" style="text-align: center;text-align: center;display:none"><div  id="wt616_WebPatterns_wt8_block_wt13_wtloader" class="Loader"></div >Loading</div ><script>RichWidgets_Feedback_AjaxWait_init('wt616_WebPatterns_wt8_block_wt13_wtdivWait');</script><span id="wt616_WebPatterns_wt8_block_RichWidgets_wt9_block"><script type='text/javascript'>
+OsRegisterExceptionHandler(RichWidgets_Feedback_Message_ErrorHandler)
+</script><div  id="wt616_WebPatterns_wt8_block_RichWidgets_wt9_block_wtFeedback_Wrapper" class="Feedback_Message_Wrapper"><span id="wt616_WebPatterns_wt8_block_RichWidgets_wt9_block_wtnotify"><span class="NotifyWidget"></span><SCRIPT type="text/javascript">
+//<![CDATA[
+RichWidgets_Feedback_Message_notifyWidget ='wt616_WebPatterns_wt8_block_RichWidgets_wt9_block_wtnotify';
+//]]>
+</SCRIPT></span></div ></span></div >
+    
+<script type="text/javascript">
+//<![CDATA[
+var OsPage_ValidatorsOrder =  new Array("wt616_wtMainContent_RichWidgets_wt579_block_wt2_wtUploadTokenInput", "wt616_wtMainContent_RichWidgets_wt568_block_wt2_wtUploadTokenInput", "wt616_wtMainContent_RichWidgets_wt279_block_wt2_wtUploadTokenInput", "wt616_wtMainContent_wt110", "wt616_wtMainContent_wt565", "wt616_wtMainContent_wt240", "wt616_wtMainContent_wt46", "wt616_wtMainContent_wt211", "wt616_wtMainContent_wt385", "wt616_wtMainContent_wt170", "wt616_wtMainContent_wt72", "wt616_wtMainContent_wt598", "wt616_wtMainContent_wtReferral", "wt616_wtMainContent_wtProposal", "wt616_wtMainContent_wt346", "wt616_wtMainContent_wt368", "wt616_wtMainContent_wt216", "wt616_wtMainContent_wt10", "wt616_wtMainContent_wt92", "wt616_wtMainContent_wt274", "wt616_wtMainContent_wt520", "wt616_wtMainContent_wt374", "wt616_wtMainContent_wt378", "wt616_wtMainContent_wt128", "wt616_wtMainContent_wt102", "wt616_wtMainContent_wt39", "wt616_wtMainContent_wt461");
+var OsPage_Validators =  new Array({}, 
+{controltovalidate: "wt616_wtMainContent_wt110", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt565", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt240", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt46", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt211", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt385", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt170", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt72", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt598", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wtReferral", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wtProposal", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt346", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt368", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt216", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt10", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt92", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt274", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt520", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt374", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt378", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt128", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt102", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt39", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"}, 
+{controltovalidate: "wt616_wtMainContent_wt461", evaluationfunction: "OsCustomValidatorEvaluateIsValid", errormessage: "Text expected!", clientvalidationfunction: "OsCustomValidatorText"});
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var OsPage_ValidationActive = false;
+OsValidatorOnLoad();
+
+function OsValidatorOnSubmit() {
+  if (OsPage_ValidationActive) { return OsValidatorCommonOnSubmit(); }
+  return true;
+}
+// ]]>
+</script>
+</form><script type="text/javascript">outsystems.internal.$._waitForViewstate = true;outsystems.internal.$(document).ready(function() {outsystems.internal.$('input[name=__OSVSTATE]').val('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');outsystems.internal.$._waitForViewstate = false;});</script>
+<script type="text/javascript">//<![CDATA[
+if(!window.OsJSONUpdate){do{try {if(window.parent && window.parent.OsJSONUpdate)window.OsJSONUpdate = window.parent.OsJSONUpdate;}catch(ex){d = document.domain.indexOf('.')+1;document.domain = document.domain.substr(d, document.domain.length - d);}}while(!window.OsJSONUpdate && document.domain.indexOf('.')!=document.domain.lastIndexOf('.'));if (!window.OsJSONUpdate){try{document.domain = window.location.hostname;}catch(ex){}window.OsJSONUpdate = function() {};}}
+//]]></script><script type="text/javascript">//<![CDATA[
+OsJSONUpdate({"js":["outsystems.internal.$(document).ready(function() {OsJSONUpdate({\"js\":[\"\\r\\n$('textarea').each(function(index)\\r\\n{\\r\\n    $('textarea')[index].style.height = ($('textarea')[index].scrollHeight + 5) + 'px';\\r\\n});\\r\\n\",\"\\r\\nvar siID = window.setInterval('forceaction();', 900000);\\r\\n\\r\\nfunction forceaction()\\r\\n{\\r\\n    clearInterval(siID);\\r\\n    $('.KeepAlive').click();\\r\\n}\\r\\n\"]})});"]})//]]></script><script src="/PerformanceProbe/performanceprobe.js?11_9_2_29615" type="text/javascript" charset="UTF-8"></script>
+  </body>
+</html>
